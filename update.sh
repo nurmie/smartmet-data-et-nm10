@@ -30,7 +30,7 @@ if [ -s "$CNF" ]; then
     . "$CNF"
 fi
 
-NM10_PARAMS="${NM10_PARAMS:-${SCRIPTDIR}/nm10-params.txt}"
+NM10_PARAMS="${NM10_PARAMS:-${SCRIPTDIR}/cnf/nm10-params.txt}"
 
 mkdir -p "$OUTDIR"
 
