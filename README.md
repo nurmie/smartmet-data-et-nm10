@@ -31,9 +31,9 @@ Files are semicolon-delimited, all fields double-quoted, with no header row. Thi
 
 Each row carries a single parameter value for one station and timestamp. This **long format** is pivoted to **wide format** (one row per station + timestamp, one column per parameter) before being handed to csv2qd.
 
-### Key difference from NM10 (Ukraine)
+### Key difference from NM10 ()
 
-| Aspect          | NM10 (Ukraine)                      | ET NM10                              |
+| Aspect          | NM10 ()                      | ET NM10                              |
 |-----------------|-------------------------------------|--------------------------------------|
 | Delimiter       | comma                               | semicolon                            |
 | Structure       | key-value pairs on one line per file | one row per observation (long format)|
