@@ -48,7 +48,7 @@ STATIONFILE=${STATIONFILE:-$BASE/run/data/aws/cnf/stations.csv}
 PARAMFILE=${PARAMFILE:-$BASE/run/data/aws/cnf/parameters.csv}
 INFILE=$TMP/csv2qd_input_aws.csv
 # Must match order in nm10-params.txt
-PARAMS=${PARAMS:-Temperature,Humidity,Pressure,DewPoint,WindSpeedMS,WindDirection,WindGust,Precipitation1h,Radiation}
+PARAMS=${PARAMS:-Temperature,Humidity,Pressure,DewPoint,WindSpeedMS,WindDirection,WindGust,Precipitation1h}
 PRODNUM=${PRODNUM:-1001}
 PRODNAME=${PRODNAME:-SYNOP}
 
