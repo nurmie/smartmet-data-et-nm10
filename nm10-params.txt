@@ -1,0 +1,24 @@
+# ET NM10 parameter names (param_name column, column 3 of the CSV).
+# One name per line; defines which parameters are extracted and their column order
+# in the csv2qd input. The order here must match the -p parameter list in
+# convert-to-sqd.sh and the SmartMet parameter mapping in parameters.csv.
+#
+# Format of the source CSV (semicolon-delimited, quoted fields):
+#   station_id ; timestamp ; param_name ; param_group ; unit ; value ; height ; agg_type ; period
+
+# Standard meteorological parameters (1-minute means at 2 m)
+AIR_TEMPERATURE_DEGREES_CELSIUS_MEAN_PT1M_2m_1
+RELATIVE_HUMIDITY_PERCENT_MEAN_PT1M_2m_1
+AIR_PRESSURE_HECTO_PASCALS_MEAN_PT1M_2m_1
+DEW_POINT_TEMPERATURE_DEGREES_CELSIUS_MEAN_PT1M_2m_1
+
+# Wind (1-second means at 10 m; gust is 15-minute value at 2 m)
+WIND_SPEED_METRES_PER_SECOND_MEAN_PT1S_10m_1
+WIND_DIRECTION_METRES_PER_SECOND_MEAN_PT1S_10m_1
+WIND_GUST_SPEED_METRES_PER_SECOND_VALUE_PT15M_2m_1
+
+# Precipitation (15-minute accumulation at 1 m)
+RAIN_ACCUMULATION_MILLIMETRES_SUM_PT15M_1m_1
+
+# Radiation (1-hour maximum at 2 m)
+SHORT_WAVE_TOTAL_RADIATION_WATTS_PER_SQUARE_METRE_MAXIMUM_PT1H_2m_1
