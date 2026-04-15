@@ -33,19 +33,19 @@ fi
 
 TMP=$BASE/tmp/data/et-nm10
 EDITOR=${EDITOR:-$BASE/editor/in}
-LOGFILE=$BASE/logs/data/et-nm10.log
+LOGFILE=$BASE/logs/data/aws.log
 
 TIMESTAMP=$(date +%Y%m%d%H%M)
 
-OUT=${OUT:-$BASE/data/et-nm10/querydata}
-OBSFILE=$TMP/${TIMESTAMP}_et-nm10.sqd
-STATIONFILE=${STATIONFILE:-$BASE/run/data/et-nm10/cnf/stations.csv}
-PARAMFILE=${PARAMFILE:-$BASE/run/data/et-nm10/cnf/parameters.csv}
-INFILE=$TMP/csv2qd_input_et-nm10.csv
+OUT=${OUT:-$BASE/data/aws/querydata}
+OBSFILE=$TMP/${TIMESTAMP}_aws.sqd
+STATIONFILE=${STATIONFILE:-$BASE/run/data/aws/cnf/stations.csv}
+PARAMFILE=${PARAMFILE:-$BASE/run/data/aws/cnf/parameters.csv}
+INFILE=$TMP/csv2qd_input_aws.csv
 # Must match order in nm10-params.txt
 PARAMS=${PARAMS:-Temperature,Humidity,Pressure,DewPoint,WindSpeedMS,WindDirection,WindGust,Precipitation1h,Radiation}
-PRODNUM=${PRODNUM:-1002}
-PRODNAME=${PRODNAME:-NM10}
+PRODNUM=${PRODNUM:-1001}
+PRODNAME=${PRODNAME:SYNOP}
 
 mkdir -p "$TMP" "$OUT"
 

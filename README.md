@@ -103,11 +103,7 @@ Lines beginning with `#` and blank lines are ignored.
 | `WIND_GUST_SPEED_METRES_PER_SECOND_VALUE_PT15M_2m_1`              | WindGust           |
 | `RAIN_ACCUMULATION_MILLIMETRES_SUM_PT15M_1m_1`                    | Precipitation1h    |
 | `SHORT_WAVE_TOTAL_RADIATION_WATTS_PER_SQUARE_METRE_MAXIMUM_PT1H_2m_1` | Radiation      |
-| `LEAF_WETNESS_NO_UNIT_MEAN_PT1H_2m_1`                             | LeafWetness        |
-| `EVAPOTRANSPIRATION_MILLIMETRES_SUM_P1D_1`                        | Evapotranspiration |
-| `SOIL_MOISTURE_PERCENT_MEAN_PT1M_0.2m_1`                          | SoilMoisture02m    |
-| `SOIL_MOISTURE_PERCENT_MEAN_PT1M_0.5m_2`                          | SoilMoisture05m    |
-| `SOIL_MOISTURE_PERCENT_MEAN_PT1M_1m_3`                            | SoilMoisture1m     |
+
 
 ## Configuration files
 
@@ -116,5 +112,5 @@ The following site-specific files are **not** included in this repository and mu
 | File                                          | Contents                                      |
 |-----------------------------------------------|-----------------------------------------------|
 | `/smartmet/cnf/data/et-nm10.cnf`              | Path variables (see above)                    |
-| `$BASE/run/data/et-nm10/cnf/stations.csv`     | Station list for csv2qd (`-S` flag)           |
-| `$BASE/run/data/et-nm10/cnf/parameters.csv`   | Parameter mapping for csv2qd (`-P` flag)      |
+| `$BASE/run/data/aws/cnf/stations.csv`     | Station list for csv2qd (`-S` flag)           |
+| `$BASE/run/data/aws/cnf/parameters.csv`   | Parameter mapping for csv2qd (`-P` flag)      |
