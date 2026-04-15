@@ -24,8 +24,13 @@ else
     BASE=$HOME
 fi
 
-# Load site-specific configuration
+SCRIPTDIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Load site-specific configuration (system path first, project default as fallback)
 CNF=$BASE/cnf/data/${DATASET}.cnf
+if [ ! -s "$CNF" ]; then
+    CNF="${SCRIPTDIR}/cnf/${DATASET}.cnf"
+fi
 if [ -s "$CNF" ]; then
     # shellcheck source=/dev/null
     . "$CNF"

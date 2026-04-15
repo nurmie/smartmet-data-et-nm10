@@ -53,8 +53,8 @@ Each row carries a single parameter value for one station and timestamp. This **
 Requires a configuration file at `/smartmet/cnf/data/et-nm10.cnf` that exports at least:
 
 ```sh
-MODEL_RAW_ROOT=/smartmet/tmp/data/et-nm10/raw
-OUTDIR=/smartmet/tmp/data/et-nm10
+MODEL_RAW_ROOT=/smartmet/data/incoming/local_obs2
+OUTDIR=/smartmet/data/aws/ethiopia/
 ```
 
 ### parse-et-nm10-csvtoqd.sh

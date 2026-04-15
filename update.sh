@@ -13,15 +13,18 @@
 #   NM10_PARAMS     - path to params file (default: <script dir>/nm10-params.txt)
 #
 # Example configuration file (/smartmet/cnf/data/et-nm10.cnf):
-#   MODEL_RAW_ROOT=/smartmet/tmp/data/et-nm10/raw
+#   MODEL_RAW_ROOT=/smartmet/data/incoming/local_obs2
 #   OUTDIR=/smartmet/tmp/data/et-nm10
 
 set -eu
 
 SCRIPTDIR="$(cd "$(dirname "$0")" && pwd)"
 
-# Load site-specific configuration
+# Load site-specific configuration (system path first, project default as fallback)
 CNF=/smartmet/cnf/data/et-nm10.cnf
+if [ ! -s "$CNF" ]; then
+    CNF="${SCRIPTDIR}/cnf/et-nm10.cnf"
+fi
 if [ -s "$CNF" ]; then
     # shellcheck source=/dev/null
     . "$CNF"

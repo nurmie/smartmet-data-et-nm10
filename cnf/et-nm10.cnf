@@ -1,0 +1,11 @@
+# Default configuration for ET NM10 data pipeline.
+# Copy to /smartmet/cnf/data/et-nm10.cnf and adjust paths for the target system.
+
+# Directory containing raw observation CSV files
+MODEL_RAW_ROOT=/smartmet/data/incoming/local_obs2
+
+# Directory for intermediate csv2qd input files
+OUTDIR=/smartmet/tmp/data/et-nm10
+
+# Directory for final querydata output
+OUT=/smartmet/data/aws/querydata
