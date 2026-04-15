@@ -20,8 +20,14 @@ set -eu
 
 SCRIPTDIR="$(cd "$(dirname "$0")" && pwd)"
 
+if [ -d /smartmet ]; then
+    BASE=/smartmet
+else
+    BASE=$HOME
+fi
+
 # Load site-specific configuration (system path first, project default as fallback)
-CNF=/smartmet/cnf/data/et-nm10.cnf
+CNF=$BASE/cnf/data/et-nm10.cnf
 if [ ! -s "$CNF" ]; then
     CNF="${SCRIPTDIR}/cnf/et-nm10.cnf"
 fi
@@ -30,7 +36,7 @@ if [ -s "$CNF" ]; then
     . "$CNF"
 fi
 
-NM10_PARAMS="${NM10_PARAMS:-${SCRIPTDIR}/cnf/nm10-params.txt}"
+NM10_PARAMS="${NM10_PARAMS:-$BASE/run/data/aws/cnf/nm10-params.txt}"
 
 mkdir -p "$OUTDIR"
 
