@@ -50,7 +50,7 @@ INFILE=$TMP/csv2qd_input_aws.csv
 # Must match order in nm10-params.txt
 PARAMS=${PARAMS:-Temperature,Humidity,Pressure,DewPoint,WindSpeedMS,WindDirection,WindGust,Precipitation1h,Radiation}
 PRODNUM=${PRODNUM:-1001}
-PRODNAME=${PRODNAME:SYNOP}
+PRODNAME=${PRODNAME:-SYNOP}
 
 mkdir -p "$TMP" "$OUT"
 

@@ -34,7 +34,7 @@ NM10_PARAMS="${NM10_PARAMS:-${SCRIPTDIR}/nm10-params.txt}"
 
 mkdir -p "$OUTDIR"
 
-NM10_OUT="$OUTDIR/csv2qd_input_et-nm10.csv"
+NM10_OUT="$OUTDIR/csv2qd_input_aws.csv"
 : > "$NM10_OUT"
 
 echo "Processing ET NM10 CSV files from: $MODEL_RAW_ROOT" >&2
